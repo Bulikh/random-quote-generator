@@ -1,38 +1,84 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: #16a085;
+  font-family: Arial;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#quote-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #eee;
+  width: 450px;
+  box-sizing: border-box;
+  padding: 5px 20px;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 0px 15px #fff;
+}
+#text {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+#text h1 {
+  margin: 0 0 15px 10px;
+  font-size: 18px;
+}
+#author {
+  width: 100%;
+  text-align: right;
+}
+#new-quote {
+  border: none;
+  border-radius: 3px;
+  padding: 12px 15px;
+  display: inline-block;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  background-color: #16a085;
+  color: #fff;
+}
+#new-quote:hover {
+  opacity: 0.8;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  width: 100%;
+  margin: 20px 0;
+  align-items: center;
+}
+.social {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+}
+.social a {
+  border-radius: 3px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #16a085;
+  margin: 0 5px;
+  color: #fff;
+  text-decoration: none;
+}
+.social a:hover {
+  opacity: 0.8;
+}
+.social i {
+  font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 500px) {
+  #quote-box {
+    width: 90%;
   }
 }
